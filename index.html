@@ -13,7 +13,7 @@ own advice every time you open a new tab!
 <br/>
 <button onclick="saveLines();" >Save</button>
 </div>
-    
+
 <div id="billboard" style=
     "font-size: 2rem;
     position: relative;
@@ -21,7 +21,7 @@ own advice every time you open a new tab!
     top:0;
     height: 100%;
     color: black;">
-    
+
 <h1 id="billboardH1"
 style="
 width: 100%;
@@ -29,8 +29,12 @@ height: 100%;
 text-align: center;
 vertical-align: center;
 font-family: ibm plex serif italic; font-style: italic;">WisdomLine</h1>
-<button 
-    onclick="localStorage.removeItem('wiselines'); document.location.reload();">
-    Clear saved saved lines
+<button
+    onclick="editLines();">
+    Edit lines
 </button>
-</div>    
+<button
+-    onclick="localStorage.removeItem('wiselines'); document.location.reload();">
+    Clear lines
+</button>
+</div>

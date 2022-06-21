@@ -7,12 +7,12 @@ window.onload = function() {
     if(!localStorage.getItem('wiselines')) {
         b.style.display="none";
         c.style.display="block";
-         } 
+         }
          else {
             text = localStorage.getItem('wiselines');
             lines = text.split("\n");
             n = getRandomInt(0,lines.length);
-            t.innerText = lines[n]; 
+            t.innerText = lines[n];
 
             c.style.display="none";
             b.style.display="block";
@@ -26,9 +26,15 @@ function saveLines() {
     localStorage.setItem('wiselines', l);
     document.location.reload();
 }
-
+function editLines() {
+    t = document.getElementById("wiselinesTextArea");
+    l = localStorage.getItem('wiselines');
+    t.value = l;
+    c.style.display="block";
+    b.style.display="none";
+}
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); 
-} 
+    return Math.floor(Math.random() * (max - min) + min);
+}
